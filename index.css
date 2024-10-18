@@ -1,7 +1,7 @@
 /* ESTILOS GENERALES */
 :root {
     --text-color:#202229;
-    --background-color: #c7c7c7; 
+    --background-color: #dcdbdb; 
 
     --paragraph-font-size: clamp(1rem, 3vw, 1.2rem);
     --title-h1-font-size: clamp(1.9rem, 3vw, 2.9rem);

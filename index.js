@@ -16,7 +16,7 @@ const scrollActive = () => {
     }
 
     const observerScroll = new IntersectionObserver(callback, {
-        threshold: [0.6]
+        threshold: [0.59, 0.75],
     });
 
     sections.forEach(section => observerScroll.observe(section));

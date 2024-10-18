@@ -1,0 +1,125 @@
+/* ESTILOS GENERALES */
+:root {
+    --text-color:#202229;
+    --background-color: #c7c7c7; 
+
+    --paragraph-font-size: clamp(1rem, 3vw, 1.2rem);
+    --title-h1-font-size: clamp(1.9rem, 3vw, 2.9rem);
+    --title-h2-font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,ol {
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+p {
+    text-wrap: pretty;
+    font-size: var(--paragraph-font-size);
+    margin-bottom: 10px;
+}
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: var(--title-h1-font-size);
+}
+h2 {
+    font-size: var(--title-h2-font-size);
+}
+
+/* ESTILOS DEL BODY */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    display: grid;
+    grid-template: 
+    "header header" 100px
+    "main   aside"  auto
+    "footer footer" 50px /
+     auto   300px
+}
+
+/* ESTILOS DEL HEADER */
+
+header {
+    grid-area: header;
+    padding: 50px 0;
+    h1 {
+        text-align: start;
+    }
+}
+/* ESTILOS DEL ASIDE */
+.nav-aside {
+    position: sticky;
+    top: 50px;
+    padding-left: 30px;
+}
+.nav-aside h3 {
+    margin-bottom: 20px;
+}
+.nav-aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aside-content-link {
+    color: var(--text-color);
+    padding: 5px 10px;
+}
+.aside-content-link:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+.aside-content-link.active-content-link {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+.nav-aside ul li a
+.nav-aside details {
+
+}
+.nav-aside details summary::marker {
+    display: none;
+}
+
+/* MAIN ESTILOS */
+main {
+    grid-area: main;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+section[data-scroll] h2 {
+    text-align: start;
+}
+aside {
+    grid-area: aside;
+    padding: 74px 30px;
+}
+footer {
+    grid-area: footer;
+}
+
+/* FOOTER ESTILOS */
+
+footer h3 {
+    text-align: center;
+}
